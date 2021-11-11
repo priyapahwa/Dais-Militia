@@ -1,0 +1,19 @@
+<header>
+  <nav class="main-nav">
+    <input type="checkbox" id="check" />
+    <label for="check" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <a href="home.html" class="logo">Militia</a>
+    <ul class="navlinks">
+      <li><a href="home.html">About</a></li>
+      {% if user.is_authenticated %}
+      <li><a href="forms.html">Form</a></li>
+      <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+      {% else %}
+      <li><a href="{% url 'account_login' %}">Login</a></li>
+      <li><a href="{% url 'account_signup' %}">Sign-up</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+</header>

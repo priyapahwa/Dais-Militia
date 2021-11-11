@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href={% static 'assets/sign.css' %}>
+    <link rel="stylesheet" href={% static 'assets/styles.css' %}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+<body>
+    <center>
+        <h1 class="headings">Sign In</h1>
+        <div class="cont_principal">
+            <div class="cont_centrar">
+                <div class="cont_login">
+                    <form action="POST">
+                        <div class="cont_tabs_login">
+                            <ul class='ul_tabs'>
+                   </ul>
+                        </div>
+                        <div class="cont_text_inputs">
+                            <input type="text" class="input_form_sign d_block active_inp" placeholder="EMAIL"
+                                name="emauil_us" />
+                            <input type="hidden password" class="input_form_sign d_block  active_inp"
+                                placeholder="PASSWORD">
+                        </div>
+                        <div class="cont_btn">
+                            <center><button class="btn_sign">Login</button></center>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+</script>
+
+</html>

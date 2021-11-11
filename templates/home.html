@@ -1,15 +1,62 @@
 {% extends 'base.html' %}
 
 {% block title %}Home{% endblock title %}
+{% load static %}
 
 {% block content %}
-<h1>Homepage</h1>
-{% if user.is_authenticated %}
-    Hi {{ user.username }}
-    <p><a href= "{% url 'account_logout' %}">Log Out</a></p>
-{% else %}
-<p> You are not logged in </p>
-<a href="{% url 'account_login' %}">Log In</a>
-<a href="{% url 'account_signup' %}">Sign Up</a>
-{% endif %}
+  <div class="align">
+    <h2>Bridging the Gap with</h2>
+    <h1>Militia</h1>
+    <img src="{% static 'img/logo.png' %}" height="100px">
+  </div>
+  <center>
+    <p class="intro">Militia is a platform where you as a rightful citizen can impart some help to the military.Militia is a safe
+      place where you can give tips regarding suspicious activity in you vicinity anonymously.Dont hesitate to give your
+      tips to the military and prove to be a true citizen of India.
+    </p>
+    </p>
+  </center>
+  <div class="headings">
+    <h3>What we Provide?</h3>
+  </div>
+  <div class="container">
+
+    <div class="card">
+      <div class="avatar">
+        <img class="image" src="{% static 'img\dais.png' %}" height="90px" width="auto">
+      </div>
+      <div class="content-container">
+        <p class="title">Dias</p>
+        <p class="content">
+          An interface for civilians to impart their tips.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="avatar">
+        <img class="image" src="{% static 'img/anonymity.png' %}" />
+      </div>
+      <div class="content-container">
+        <p class="title">Anonymity</p>
+        <p class="content">
+          Providing civilians a secure way of keeping their identity safe will assist them to freely give vital info to
+          the military.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="avatar">
+        <img class="image" src="{% static 'img\security.png' %}" height="90px" width="auto" />
+      </div>
+      <div class="content-container">
+        <p class="title">Security</p>
+        <p class="content">
+          In order to keep the information safe and secure, encrypting the data in multiple ways will enhance cyber
+          security.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
 {% endblock content %}
