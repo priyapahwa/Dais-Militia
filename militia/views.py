@@ -10,10 +10,11 @@ class HomePageView(TemplateView):
     template_name = 'home.html'
 
 def TipFormView(request):
-    context = {}
     if request.method == "POST":
-        form = TipForm(request.POST)
-        form.save()
-        messages.success(request, 'Your anonymous message has been sent!')
-    context["form"] = TipForm()
-    return render(request, "forms.html", context)
+        form = TipForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your anonymous message has been sent!')
+        else:
+            messages.error(request, 'Enter valid information')
+    return render(request, "forms.html")

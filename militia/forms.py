@@ -1,5 +1,4 @@
 from django import forms
-from django.db.models.fields.json import CaseInsensitiveMixin
 from militia.models import Tip
 
 class TipForm(forms.ModelForm):
@@ -11,7 +10,7 @@ class TipForm(forms.ModelForm):
 
     class Meta:
         model = Tip
-        fields = ("title", "message", "location", "pin_code", "date")
+        fields = ("title", "message", "location", "pin_code", "date", "file")
 
     def __str__(self):
         return self.title

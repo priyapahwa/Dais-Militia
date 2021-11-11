@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Sign Up{% endblock title %}
+
+{% block styles %} 
+<link rel="stylesheet" href="{% static 'assets/sign.css' %}">
+{% endblock styles %}
+
+{% block content %}
+
+  <center>
+    <h1 class="headings">Sign Up</h1>
+    <div class="cont_principal">
+      <div class="cont_centrar">
+        <div class="cont_login">
+          <form method="post">
+            {% csrf_token %}
+            <div class="cont_tabs_login">
+              <ul class='ul_tabs'>
+            </ul>
+            </div>
+            <div class="cont_text_inputs">
+              <input type="text" class="input_form_sign d_block active_inp " placeholder="NAME" name="name_us" />
+              <input type="text" class="input_form_sign d_block active_inp" placeholder="EMAIL" name="email" />
+              <input type="password" class="input_form_sign d_block  active_inp" placeholder="PASSWORD" name="password" />
+              <input type="password" class="input_form_sign d_block active_inp" placeholder="CONFIRM PASSWORD" name="password" />  
+              <input type="text" class="input_form_sign d_block active_inp" placeholder="MOBILE NUMBER" name="mobile_number" />
+              <input type="date" class="input_form_sign d_block active_inp" placeholder="DOB:" name="birth_date" />
+              <input type="text" class="input_form_sign d_block active_inp" placeholder="AADHAR CARD NUMBER"
+                name="aadhar_number" />
+            </div>
+            <div class="cont_btn">
+             <center><button type="submit" class="btn_sign">Sign Up</button></center> 
+            </div>
+          </form>
+        </div>
+      </div>
+   </div>
+  </center>
+
+{% endblock content %}
