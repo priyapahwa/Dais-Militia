@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from militia.models import Tip
+
+
+admin.site.register(Tip)

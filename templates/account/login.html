@@ -1,12 +1,31 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Log In{% endblock title %}
 
+{% block styles %} <link rel="stylesheet" href="{% static 'assets/sign.css' %}"> {% endblock styles %}
+
 {% block content %}
-<h2>Log In</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Log In</button>
-</form>
+<center>
+    <h1 class="headings">Log In</h1>
+    <div class="cont_principal">
+        <div class="cont_centrar">
+            <div class="cont_login">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="cont_tabs_login">
+                        <ul class='ul_tabs'></ul>
+                    </div>
+                    <div class="cont_text_inputs">
+                       {{ form.as_p }}                        
+                    </div>
+                    <div class="cont_btn">
+                        <center><button type="submit" class="btn_sign">Login</button></center>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</center>
+
 {% endblock content %}

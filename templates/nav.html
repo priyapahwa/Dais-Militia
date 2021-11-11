@@ -4,11 +4,11 @@
     <label for="check" class="menu-btn">
       <i class="fas fa-bars"></i>
     </label>
-    <a href="home.html" class="logo">Militia</a>
+    <a href="{% url 'home' %}" class="logo">Militia</a>
     <ul class="navlinks">
       <li><a href="home.html">About</a></li>
       {% if user.is_authenticated %}
-      <li><a href="forms.html">Form</a></li>
+      <li><a href="{% url 'forms' %}">Form</a></li>
       <li><a href="{% url 'account_logout' %}">Log Out</a></li>
       {% else %}
       <li><a href="{% url 'account_login' %}">Login</a></li>

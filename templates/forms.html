@@ -1,143 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form</title>
-  {% load static %}
-  <link rel="stylesheet" href={% static 'assets/styles.css' %}>
-  <link rel="stylesheet" href={% static 'assets/form.css' %}>
-  <link rel="shortcut icon" href={% static 'img/favicon.png' %} type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-  </head>
+{% block title %}Form{% endblock title %}
 
-<body>
-  <header>
-    <nav class="main-nav">
-      <input type="checkbox" id="check" />
-      <label for="check" class="menu-btn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <a href="home.html" class="logo">Militia</a>
-      <ul class="navlinks">
-        <li><a href="home.html">About</a></li>
-        <li><a href="forms.html">Form</a></li>
-        <li><a href="login-signup.html">Login/Sign-up</a></li>
-      </ul>
-    </nav>
-  </header>
-  <center>
-    <h1 class="headings">Form</h1>
-    <p>Please fill the details accurately.</p>
+{% block styles %} 
+<link rel="stylesheet" href="{% static 'assets/form.css' %}"> 
+<link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/png">
+{% endblock styles %}
+
+{% block content %}
+
+<center>
+  <h1 class="headings">Form</h1>
+  <p>Please fill the details accurately.</p>
 
 
-    <div class="container1">
-      <form action="POST">
-        <div class="row">
-          <div class="col-25">
-            <label for="location">Location</label>
-          </div>
-          <div class="col-75">
-            <input type="text" id="location" name="location">
-          </div>
+  <div class="container1">
+    <form method="post">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-25">
+          <label for="location">Location</label>
         </div>
-        <div class="row">
-          <div class="col-25">
-            <label for="date">Date</label>
-          </div>
-          <div class="col-75">
-            <input type="date" id="date" name="date">
-          </div>
+        <div class="col-75">
+          <input type="text" id="location" name="location">
         </div>
-
-        <div class="row">
-          <div class="col-25">
-            <label for="message">About the incident</label>
-          </div>
-          <div class="col-75">
-            <textarea id="message" name="message" style="height:200px"></textarea>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="pin_code">Pin Code</label>
         </div>
-        <div class="row">
-          <div class="col-25">
-            <label for="file">Proof multimedia</label>
-          </div>
-          <div class="col-75 file">
-            <input id="file" name="file" type="file" >Choose File</input>
-          </div>
+        <div class="col-75">
+          <input type="text" id="pin_code" name="pin_code">
         </div>
-        <div class="row">
-          <input type="submit" value="Submit">
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="date">Date</label>
         </div>
+        <div class="col-75">
+          <input type="date" id="date" name="date">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="title">Title</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="title" name="title">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="message">About the incident</label>
+        </div>
+        <div class="col-75">
+          <textarea id="message" name="message" style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="file">Proof multimedia</label>
+        </div>
+        <div class="col-75 file">
+          <input id="file" name="file" type="file" >Choose File</input>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Submit">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+          <strong> {{ message }}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+      </div>
 
 
 
-      </form>
-    </div>
-  </center>
+    </form>
+  </div>
+</center>
 
-  <script>
-
-    //Set up some of our variables.
-    var map; //Will contain map object.
-    var marker = false; ////Has the user plotted their location marker? 
-
-    //Function called to initialize / create the map.
-    //This is called when the page has loaded.
-    function initMap() {
-
-      //The center location of our map.
-      var centerOfMap = new google.maps.LatLng(20.593684, 78.96288);
-
-      //Map options.
-      var options = {
-        center: centerOfMap, //Set center.
-        zoom: 7 //The zoom value.
-      };
-
-      //Create the map object.
-      map = new google.maps.Map(document.getElementById('map'), options);
-
-      //Listen for any clicks on the map.
-      google.maps.event.addListener(map, 'click', function (event) {
-        //Get the location that the user clicked.
-        var clickedLocation = event.latLng;
-        //If the marker hasn't been added.
-        if (marker === false) {
-          //Create the marker.
-          marker = new google.maps.Marker({
-            position: clickedLocation,
-            map: map,
-            draggable: true //make it draggable
-          });
-          //Listen for drag events!
-          google.maps.event.addListener(marker, 'dragend', function (event) {
-            markerLocation();
-          });
-        } else {
-          //Marker has already been added, so just change its location.
-          marker.setPosition(clickedLocation);
-        }
-        //Get the marker's location.
-        markerLocation();
-      });
-    }
-
-    //This function will get the marker's current location and then add the lat/long
-    //values to our textfields so that we can save the location.
-    function markerLocation() {
-      //Get location.
-      var currentLocation = marker.getPosition();
-      //Add lat and lng values to a field that we can save.
-      document.getElementById('lat').value = currentLocation.lat(); //latitude
-      document.getElementById('lng').value = currentLocation.lng(); //longitude
-    }
+<script>
 
 
-    //Load the map when the page has finished loading.
-    google.maps.event.addDomListener(window, 'load', initMap);</script>
-</body>
+  var map; 
+  var marker = false; 
 
-</html>
+  function initMap() {
+
+    var centerOfMap = new google.maps.LatLng(20.593684, 78.96288);
+
+
+    var options = {
+      center: centerOfMap, 
+      zoom: 7 
+    };
+
+
+    map = new google.maps.Map(document.getElementById('map'), options);
+
+
+    google.maps.event.addListener(map, 'click', function (event) {
+     
+      var clickedLocation = event.latLng;
+    
+      if (marker === false) {
+
+        marker = new google.maps.Marker({
+          position: clickedLocation,
+          map: map,
+          draggable: true 
+        });
+        
+        google.maps.event.addListener(marker, 'dragend', function (event) {
+          markerLocation();
+        });
+      } else {
+       
+        marker.setPosition(clickedLocation);
+      }
+     
+      markerLocation();
+    });
+  }
+
+  function markerLocation() {
+    
+    var currentLocation = marker.getPosition();
+
+    document.getElementById('lat').value = currentLocation.lat(); //latitude
+    document.getElementById('lng').value = currentLocation.lng(); //longitude
+  }
+
+
+  google.maps.event.addDomListener(window, 'load', initMap);</script>
+
+{% endblock content %}
