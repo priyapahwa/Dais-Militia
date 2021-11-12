@@ -4,59 +4,180 @@
 {% load static %}
 
 {% block content %}
-  <div class="align">
-    <h2>Bridging the Gap with</h2>
-    <h1>Militia</h1>
-    <img src="{% static 'img/logo.png' %}" height="100px">
+<center>
+  <div class="headings underline--magical">
+    <center><h3>Who we are?</h3></center>
   </div>
-  <center>
-    <p class="intro">Militia is a platform where you as a rightful citizen can impart some help to the military.Militia is a safe
-      place where you can give tips regarding suspicious activity in you vicinity anonymously.Dont hesitate to give your
-      tips to the military and prove to be a true citizen of India.
-    </p>
-    </p>
-  </center>
-  <div class="headings">
-    <h3>What we Provide?</h3>
-  </div>
-  <div class="container">
 
+  <section class="intro">
+    <p class="intro__subtitle">
+    <div class="intro__illustrator">
+      <div class="main-img"><img src="{% static 'img/intro.png' %}" alt="dais" height="250px"></div>
+    </div>
+    <div class="main-para">MILITIA is a platform that links military and civilian forces. Modest reports about
+      suspicious actions can be extremely advantageous to the military. It has been seen that even when a person
+      possesses critical knowledge, he/she/they tend not to share it for fear of being exposed.  Militia equips them
+      with a podium where they may disclose information discreetly.The information that is given is securely
+      transmitted to the military by emplyoing encryption techniques.MILITIA views greater national security
+      by bridging the divide.</div>
+    </p>
+
+  </section>
+</center>
+<section class="intro">
+  <h1 class="intro__title">
+    <span style="font-weight: normal;">
+      Bridging the gap with
+    </span> <span class="underline--magical">MILITIA</span> 
+  </h1>
+  <p class="intro__subtitle main-para">
+    Have some information that might be useful to the military?
+    Where to report when you know something crucial that might assist the military?
+
+  </p>
+
+
+  <div class="intro__illustration">
+    <div class="main-img"><img src="{% static 'img/hero.png' %}" alt="dais" height="350px"></div>
+  </div>
+  <button class="button ">Know more</button>
+  </div>
+</section>
+
+
+<center><div class="headings underline--magical">
+ <h3>WHAT WE PROVIDE?</h3>
+</div></center> 
+
+<ul class="cards">
+
+
+
+  <li class="cards-item">
     <div class="card">
-      <div class="avatar">
-        <img class="image" src="{% static 'img\dais.png' %}" height="90px" width="auto">
+      <div class="card-image ">
+        <center><img src="{% static 'img/security1.png' %}" alt="dais" height="150px"></center>
       </div>
-      <div class="content-container">
-        <p class="title">Dias</p>
-        <p class="content">
-          An interface for civilians to impart their tips.
-        </p>
+      <div class="card-content">
+        <div class="card-title">Security</div>
+        <p class="card-text">The tips provided by you are secure and are encrypted on the way to military.</p>
+
       </div>
     </div>
+  </li>
+  <li class="cards-item">
     <div class="card">
-      <div class="avatar">
-        <img class="image" src="{% static 'img/anonymity.png' %}" />
+      <div class="card-image ">
+        <center><img src="{% static 'img/dais1.png' %}" class="card-pad" alt="dais" height="120px"></center>
       </div>
-      <div class="content-container">
-        <p class="title">Anonymity</p>
-        <p class="content">
-          Providing civilians a secure way of keeping their identity safe will assist them to freely give vital info to
-          the military.
-        </p>
+      <div class="card-content">
+        <div class="card-title ">Dais</div>
+        <p class="card-text">Militia provides a friendly interface to collaborate and assist the military as a
+          civilian.</p>
+
       </div>
     </div>
+  </li>
+  <li class="cards-item">
     <div class="card">
-      <div class="avatar">
-        <img class="image" src="{% static 'img\security.png' %}" height="90px" width="auto" />
+      <div class="card-image ">
+        <center><img src="{% static 'img/identity.png' %}" alt="dais" height="150px"></center>
       </div>
-      <div class="content-container">
-        <p class="title">Security</p>
-        <p class="content">
-          In order to keep the information safe and secure, encrypting the data in multiple ways will enhance cyber
-          security.
-        </p>
+      <div class="card-content">
+        <div class="card-title">Anonymity</div>
+        <p class="card-text">Your identity is not revealed.So don't hesitate to share whatever crucial infomrmation
+          you have.</p>
+
       </div>
+    </div>
+  </li>
+
+
+
+</ul>
+
+<center><div class="headings underline--magical">
+  <h3>Team Behind Militia</h3>
+
+</div></center> 
+<div class="row">
+  <div class="column ">
+    <div class="profilecard" style="width: 250px
+;">
+      <img src="{% static 'img/anjali.jpg' %}" style="width:250px
+; border-radius: 20px;">
+      <h3>Anjali Vats</h3>
+      <p class="title">Sophmore,NITH</p>
+
+      <a href="https://www.linkedin.com/in/anjali-vats-188305206/" target="_blank" style="background: black;color: white; border-radius: 20px;padding: 10px;">Connect</a> 
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="profilecard" style="width: 250px
+;">
+      <img src="{% static 'img/priya1.jpg' %}" style="width:250px
+; height: 298px;border-radius: 20px;">
+      <h3>Priya Pahwa</h3>
+      <p class="title">Sophmore,NITH</p>
+
+
+     <a href="https://www.linkedin.com/in/priya-pahwa/" target="_blank" style="background: black;color: white; border-radius: 20px;padding: 6px;">Connect</a> 
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="profilecard" style="width: 250px
+;">
+      <img src="{% static 'img/suyashb.jpg' %}" style="width:250px
+; border-radius: 20px;">
+      <h3>Suyash Barwal</h3>
+      <p class="title">Sophmore,NITH</p>
+
+
+      <a href="https://www.linkedin.com/in/suyash-barwal-93ba84202/" target="_blank" style="background: black;color: white; border-radius: 20px;padding: 6px;">Connect</a> 
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="profilecard" style="width: 250px;">
+      <img src="{% static 'img/suyashs1.jpg' %}" style="width:250px; border-radius: 20px;">
+      <h3>Suyash Sachdeva</h3>
+      <p class="title">Sophmore,NITH</p>
+      <a href="https://www.linkedin.com/in/suyash-sachdeva-3096b3202/" target="_blank" style="background: black;color: white; border-radius: 20px;padding: 6px;">Connect</a> 
+    </div>
+  </div>
+</div>
+
+<footer>
+
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+
+      <h3>Team MILITIA</h3>
+
+      <p class="footer-company-name">If you have suggestions,
+        then don't hesitate to ping us up!</p>
+      <img src="{% static 'img/contact-form.png' %}" height="250px" alt="">
+
+    </div>
+    <div class="footer-right">
+
+      <p>Contact Us</p>
+
+      <form>
+
+        <input type="text" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button style="border-radius: 20px; color: RGB(18, 18, 23)
+; background-color: white;">Send</button>
+
+      </form>
+
     </div>
 
-  </div>
+  </footer>
+</footer>
 
 {% endblock content %}
