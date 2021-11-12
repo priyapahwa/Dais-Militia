@@ -155,7 +155,7 @@ height: 5px;
   display: block;
 }
 input{
-  color:white;
+  color:black;
 }
 .cont_text_inputs > input:nth-child(1){
   transition-delay: 0.2s;

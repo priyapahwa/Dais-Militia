@@ -25,7 +25,6 @@ border-radius: 25px;
   padding: 0 1em;
 }
 
-
 .intro__title {
 
   font-size: 1.3rem;
@@ -42,7 +41,7 @@ border-radius: 25px;
 
 .button {
   display: inline-block;
-background-color: black;
+
 width:10rem;
 }
 
@@ -570,7 +569,7 @@ padding-top:1rem;
     .column
     {
   
-        width:100%;
+        width:80%;
         display:block;
         margin-left: 5%;
         margin-right: 5%;
@@ -831,6 +830,7 @@ font-size: 1.5rem;
 }
 
 .underline--magical {
+
   background-image: linear-gradient(
 120deg, rgb(229, 47, 110) 0%, rgb(254, 135, 2) 100%);
   background-repeat: no-repeat;
