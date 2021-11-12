@@ -25,7 +25,6 @@ border-radius: 25px;
   padding: 0 1em;
 }
 
-
 .intro__title {
 
   font-size: 1.3rem;
@@ -42,7 +41,7 @@ border-radius: 25px;
 
 .button {
   display: inline-block;
-background-color: black;
+
 width:10rem;
 }
 
