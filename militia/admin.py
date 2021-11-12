@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from tkinter import *
+from tkinter import messagebox as mb
 from cryptography.fernet import Fernet
 import base64
 import logging
@@ -28,15 +29,32 @@ class TipAdmin(admin.ModelAdmin):
                     return None
 
             def delete():
-                root.destroy()
+                app.destroy()
 
-            root = Tk()
-            root.title("message")
-            window = Label(root, text=decrypt(msg))
-            window.pack()
+            def deletetop():
+                app.destroy()
 
-            root.after(60000, delete)
-            root.mainloop()
+            def show():
+                verify_password = password.get()
+                # Password is hard coded for the time being
+                if verify_password == "12345":
+                    top = Toplevel()
+                    top.title("")
+                    Label(top, text=decrypt(msg)).pack()
+                    top.after(10000, deletetop)
+                else:
+                    pass
+
+            app = Tk()
+            password = StringVar()
+            passEntry = Entry(app, textvariable=password, show="*")
+            submit = Button(app, text="Verify", command=show)
+
+            passEntry.pack()
+            submit.pack()
+            app.after(60000, delete)
+            app.mainloop()
+
         return super().response_change(request, obj)
 
 
