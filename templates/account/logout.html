@@ -4,12 +4,12 @@
 
 {% block content %}
 <div class="container">
-<h2>Log Out</h2>
-<p>Are you sure you want to log out?</p>
-<form method="post" action="{% url 'account_logout' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Log Out</button>
-</form>
+    <h2>Log Out</h2>
+    <p>Are you sure you want to log out?</p>
+    <form method="post" action="{% url 'account_logout' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Log Out</button>
+    </form>
 </div>
 {% endblock content %}

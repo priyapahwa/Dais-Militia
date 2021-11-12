@@ -4,72 +4,109 @@
 {% load static %}
 
 {% block content %}
+
 <style>
   @media screen and (max-width: 512px) {
     #hero {
-      display: none; 
+      display: none;
     }
   }
-    
- 
-.vert-move {
-    -webkit-animation: mover 2s infinite  alternate;
-    animation: mover 2s infinite  alternate;
-}
-img.vert-move {
-    -webkit-animation: mover 2s infinite  alternate;
-    animation: mover 2s infinite  alternate;
-}
-@-webkit-keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-2rem); }
-}
-@keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-2rem); }
-}
 
+  .vert-move {
+    -webkit-animation: mover 2s infinite alternate;
+    animation: mover 2s infinite alternate;
+  }
 
+  img.vert-move {
+    -webkit-animation: mover 2s infinite alternate;
+    animation: mover 2s infinite alternate;
+  }
 
+  @-webkit-keyframes mover {
+    0% {
+      transform: translateY(0);
+    }
 
+    100% {
+      transform: translateY(-2rem);
+    }
+  }
 
-.fade-in-text {
-  animation: fadeIn linear 2s;
-  -webkit-animation: fadeIn linear 2s;
-  -moz-animation: fadeIn linear 2s;
-  -o-animation: fadeIn linear 2s;
-  -ms-animation: fadeIn linear 2s;
-}
+  @keyframes mover {
+    0% {
+      transform: translateY(0);
+    }
 
-@keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
+    100% {
+      transform: translateY(-2rem);
+    }
+  }
 
-@-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
+  .fade-in-text {
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+  }
 
-@-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
 
-@-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
+    100% {
+      opacity: 1;
+    }
+  }
 
-@-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
 
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-o-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 </style>
+
+
 <center>
   <div class="headings underline--magical">
-    <center><h3>Who we are?</h3></center>
+    <center>
+      <h3>Who we are?</h3>
+    </center>
   </div>
 
   <section class="intro fade-in-text">
@@ -85,12 +122,13 @@ img.vert-move {
       by bridging the divide.</div>
     </p>
   </section>
+
 </center>
 <section class="intro" id="hero">
   <h1 class="intro__title">
     <span style="font-weight: normal;">
       Bridging the gap with
-    </span> <span class="underline--magical">MILITIA</span> 
+    </span> <span class="underline--magical">MILITIA</span>
   </h1>
   <p class="intro__subtitle main-para">
     Have some information that might be useful to the military?
@@ -103,18 +141,19 @@ img.vert-move {
     <div class="main-img vert-move"><img src="{% static 'img/hero.png' %}" alt="dais" width="350px"></div>
   </div>
   <a href="#team"><button class="button " style="  background-image: linear-gradient(
-    120deg, rgb(229, 47, 110) 0%, rgb(254, 135, 2) 100%);">  <a href="#team" style="color: white;">Know more</a></button>
-  </div>
+    120deg, rgb(229, 47, 110) 0%, rgb(254, 135, 2) 100%);"> <a href="#team" style="color: white;">Know
+        more</a></button>
+    </div>
 </section>
 
 
-<center><div class="headings underline--magical">
- <h3>Our Services</h3>
-</div></center> 
+<center>
+  <div class="headings underline--magical">
+    <h3>Our Services</h3>
+  </div>
+</center>
 
 <ul class="cards">
-
-
 
   <li class="cards-item">
     <div class="card">
@@ -155,60 +194,55 @@ img.vert-move {
     </div>
   </li>
 
-
-
 </ul>
 
-<center id="team"><div class="headings underline--magical">
-  <h3>Our Team</h3>
+<center id="team">
+  <div class="headings underline--magical">
+    <h3>Our Team</h3>
 
-</div></center> 
+  </div>
+</center>
+
 <div class="row">
   <div class="column ">
-    <div class="profilecard" style="width: 250px
-;">
-      <img src="{% static 'img/anjali.jpg' %}" style="width:250px
-; border-radius: 20px;">
+    <div class="profilecard" style="width: 250px;">
+      <img src="{% static 'img/anjali.jpg' %}" style="width:250px; border-radius: 20px;">
       <h3>Anjali Vats</h3>
       <p class="title">Sophomore,NITH</p>
 
-      <a href="https://www.linkedin.com/in/anjali-vats-188305206/" target="_blank" >
+      <a href="https://www.linkedin.com/in/anjali-vats-188305206/" target="_blank">
         <img src="{% static 'img/linkedin.png'%}" alt="blue" height="30rem" style="padding-right:1rem ;"></a>
-        <a href="https://github.com/anjalivats2712" target="_blank" >
-          <img src="{% static 'img/github.png'%}" alt="blue" height="30rem"></a>
-            
+      <a href="https://github.com/anjalivats2712" target="_blank">
+        <img src="{% static 'img/github.png'%}" alt="blue" height="30rem"></a>
+
     </div>
   </div>
 
   <div class="column">
-    <div class="profilecard" style="width: 250px
-;">
-      <img src="{% static 'img/priya1.jpg' %}" style="width:250px
-; height: 298px;border-radius: 20px;">
+    <div class="profilecard" style="width: 250px;">
+      <img src="{% static 'img/priya1.jpg' %}" style="width:250px; height: 298px;border-radius: 20px;">
       <h3>Priya Pahwa</h3>
       <p class="title">Sophomore,NITH</p>
-      <a href="https://www.linkedin.com/in/priya-pahwa/" target="_blank" >
-<img src="{% static 'img/linkedin.png'%}" alt="blue" height="30rem" style="padding-right:1rem ;"></a>
-<a href="https://github.com/priyapahwa" target="_blank" >
-  <img src="{% static 'img/github.png'%}" alt="blue" height="30rem"></a>
-    
+      <a href="https://www.linkedin.com/in/priya-pahwa/" target="_blank">
+        <img src="{% static 'img/linkedin.png'%}" alt="blue" height="30rem" style="padding-right:1rem ;"></a>
+      <a href="https://github.com/priyapahwa" target="_blank">
+        <img src="{% static 'img/github.png'%}" alt="blue" height="30rem"></a>
+
     </div>
   </div>
- 
+
   <div class="column">
-    <div class="profilecard" style="width: 250px
-;">
-      <img src="{% static 'img/suyashb.jpg' %}" style="width:250px
-; border-radius: 20px;">
+    <div class="profilecard" style="width: 250px;">
+      <img src="{% static 'img/suyashb.jpg' %}" style="width:250px; border-radius: 20px;">
       <h3>Suyash Barwal</h3>
       <p class="title">Sophomore,NITH</p>
 
 
-      <a href="https://www.linkedin.com/in/suyash-barwal-93ba84202/" target="_blank" >
+      <a href="https://www.linkedin.com/in/suyash-barwal-93ba84202/" target="_blank">
         <img src="{% static 'img/linkedin.png'%}" alt="blue" height="30rem" style="padding-right:1rem ;"></a>
-        <a href="https://github.com/suyash2002" target="_blank" >
-          <img src="{% static 'img/github.png'%}" alt="blue" height="30rem"></a>
-            
+      <a href="https://github.com/suyash2002" target="_blank">
+        <img src="{% static 'img/github.png'%}" alt="blue" height="30rem"></a>
+
     </div>
   </div>
 
@@ -217,11 +251,11 @@ img.vert-move {
       <img src="{% static 'img/suyashs1.jpg' %}" style="width:250px; border-radius: 20px;">
       <h3>Suyash Sachdeva</h3>
       <p class="title">Sophomore,NITH</p>
-      <a href="https://www.linkedin.com/in/suyash-sachdeva-3096b3202/" target="_blank" >
+      <a href="https://www.linkedin.com/in/suyash-sachdeva-3096b3202/" target="_blank">
         <img src="{% static 'img/linkedin.png'%}" alt="blue" height="30rem" style="padding-right:1rem ;"></a>
-        <a href="https://github.com/suyashsachdeva" target="_blank" >
-          <img src="{% static 'img/github.png'%}" alt="blue" height="30rem"></a>
-            
+      <a href="https://github.com/suyashsachdeva" target="_blank">
+        <img src="{% static 'img/github.png'%}" alt="blue" height="30rem"></a>
+
     </div>
   </div>
 </div>

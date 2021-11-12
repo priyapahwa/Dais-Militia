@@ -3,7 +3,8 @@
 
 {% block title %}Log In{% endblock title %}
 
-{% block styles %} <link rel="stylesheet" href="{% static 'assets/sign.css' %}"> {% endblock styles %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'assets/sign.css' %}"> {% endblock styles %}
 
 {% block content %}
 <center>
@@ -17,7 +18,7 @@
                         <ul class='ul_tabs'></ul>
                     </div>
                     <div class="cont_text_inputs">
-                       {{ form.as_p }}                        
+                        {{ form.as_p }}
                     </div>
                     <div class="cont_btn">
                         <center><button type="submit" class="btn_sign">Login</button></center>

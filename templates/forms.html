@@ -3,187 +3,203 @@
 
 {% block title %}Form{% endblock title %}
 
-{% block styles %} 
-<link rel="stylesheet" href="{% static 'assets/form.css' %}"> 
-<link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/png">
+{% block styles %}
+<link rel="stylesheet" href="{% static 'assets/form.css' %}">
 {% endblock styles %}
 
 {% block content %}
 <style>
-@media screen and (min-width: 600px) {
-  .col-25  {
- display:flex;
- justify-content: end;
+  @media screen and (min-width: 600px) {
+    .col-25 {
+      display: flex;
+      justify-content: end;
+    }
   }
-}
-  .faqcontainer {
-   display:flex;
-    flex-direction:column;
-    flex-wrap: wrap;
-	 margin: 0 auto;
-	 padding: 4rem;
-	 
-}
- .accordion .accordion-item {
-	 border-bottom: 1px solid white;
-}
 
- .accordion button {
-	 position: relative;
-	 display: block;
-	 text-align: left;
-	 width: 100%;
-	 padding: 1em 0;
-	 color: white;
-	 font-size: 1.15rem;
-	 font-weight: 400;
-	 border: none;
-	 background: none;
-	 outline: none;
-}
- .accordion button:hover, .accordion button:focus {
-	 cursor: pointer;
-	 color: white;
-}
- .accordion button:hover::after, .accordion button:focus::after {
-	 cursor: pointer;
-	 color: grey;
-	 border: 1px solid grey;
-}
- .accordion button .accordion-title {
-	 padding: 1.5em 1.5em 2em 0;
-}
- .accordion button .icon {
-	 display: inline-block;
-	 position: absolute;
-	 top: 18px;
-	 right: 0;
-	 width: 22px;
-	 height: 22px;
-	 border: 1px solid;
-	 border-radius: 22px;
-}
- .accordion button .icon::before {
-	 display: block;
-	 position: absolute;
-	 content: '';
-	 top: 9px;
-	 left: 5px;
-	 width: 10px;
-	 height: 2px;
-	 background: currentColor;
-}
- .accordion button .icon::after {
-	 display: block;
-	 position: absolute;
-	 content: '';
-	 top: 5px;
-	 left: 9px;
-	 width: 2px;
-	 height: 10px;
-	 background: currentColor;
-}
- .accordion button[aria-expanded='true'] {
-	 color: grey;
-}
- .accordion button[aria-expanded='true'] .icon::after {
-	 width: 0;
-}
- .accordion button[aria-expanded='true'] + .accordion-content {
-	 opacity: 1;
-	 max-height: 9em;
-	 transition: all 200ms linear;
-	 will-change: opacity, max-height;
-}
- .accordion .accordion-content {
-	 opacity: 0;
-	 max-height: 0;
-	 overflow: hidden;
-	 transition: opacity 200ms linear, max-height 200ms linear;
-	 will-change: opacity, max-height;
-}
- .accordion .accordion-content p {
-	 font-size: 1rem;
-	 font-weight: 300;
-	 margin: 2em 0;
-}
- 
+  .faqcontainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 4rem;
+
+  }
+
+  .accordion .accordion-item {
+    border-bottom: 1px solid white;
+  }
+
+  .accordion button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+  }
+
+  .accordion button:hover,
+  .accordion button:focus {
+    cursor: pointer;
+    color: white;
+  }
+
+  .accordion button:hover::after,
+  .accordion button:focus::after {
+    cursor: pointer;
+    color: grey;
+    border: 1px solid grey;
+  }
+
+  .accordion button .accordion-title {
+    padding: 1.5em 1.5em 2em 0;
+  }
+
+  .accordion button .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px;
+  }
+
+  .accordion button .icon::before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+  }
+
+  .accordion button .icon::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+  }
+
+  .accordion button[aria-expanded='true'] {
+    color: grey;
+  }
+
+  .accordion button[aria-expanded='true'] .icon::after {
+    width: 0;
+  }
+
+  .accordion button[aria-expanded='true']+.accordion-content {
+    opacity: 1;
+    max-height: 9em;
+    transition: all 200ms linear;
+    will-change: opacity, max-height;
+  }
+
+  .accordion .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+  }
+
+  .accordion .accordion-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2em 0;
+  }
 </style>
 <center>
-  <span >
-<center><h1 class="headings underline--magical " style="padding-right:1rem ;padding-bottom:0.7rem"> <img src="{% static 'img/form.png' %}" height="50rem" alt="" style="position: relative;top:1rem"> FORM</h1></center>
-  <p>Please fill the details accurately.</p>
+  <span>
+    <center>
+      <h1 class="headings underline--magical " style="padding-right:1rem ;padding-bottom:0.7rem"> <img
+          src="{% static 'img/form.png' %}" height="50rem" alt="" style="position: relative;top:1rem"> FORM</h1>
+    </center>
+    <p>Please fill the details accurately.</p>
 
 
-  <div class="container1">
-    <form method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-      <div class="row">
-        <div class="col-25">
-          <label for="location">Location</label>
+    <div class="container1">
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-25">
+            <label for="location">Location</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="location" name="location" required>
+          </div>
         </div>
-        <div class="col-75">
-          <input type="text" id="location" name="location" required>
+        <div class="row">
+          <div class="col-25">
+            <label for="pin_code">Pin Code</label>
+          </div>
+          <div class="col-75">
+            <input type="number" id="pin_code" name="pin_code" min="100000" max="999999">
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="pin_code">Pin Code</label>
+        <div class="row">
+          <div class="col-25">
+            <label for="date" required>Date</label>
+          </div>
+          <div class="col-75">
+            <input type="date" id="date" name="date" required>
+          </div>
         </div>
-        <div class="col-75">
-          <input type="number" id="pin_code" name="pin_code" min="100000" max="999999">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="date"required>Date</label>
-        </div>
-        <div class="col-75">
-          <input type="date" id="date" name="date"required>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-25">
-          <label for="title">Title</label>
+        <div class="row">
+          <div class="col-25">
+            <label for="title">Title</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="title" name="title" required>
+          </div>
         </div>
-        <div class="col-75">
-          <input type="text" id="title" name="title"required>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-25">
-          <label for="message">About the incident</label>
+        <div class="row">
+          <div class="col-25">
+            <label for="message">About the incident</label>
+          </div>
+          <div class="col-75">
+            <textarea id="message" name="message" style="height:200px" required></textarea>
+          </div>
         </div>
-        <div class="col-75">
-          <textarea id="message" name="message" style="height:200px"required></textarea>
+        <div class="row">
+          <div class="col-25">
+            <label for="file">Proof multimedia</label>
+          </div>
+          <div class="col-75 file">
+            <input id="file" name="file" type="file">Choose File</input>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="file">Proof multimedia</label>
+        <div class="row">
+          <input type="submit" value="Submit">
+          {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+            <strong> {{ message }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+          {% endif %}
         </div>
-        <div class="col-75 file">
-          <input id="file" name="file" type="file" >Choose File</input>
-        </div>
-      </div>
-      <div class="row">
-        <input type="submit" value="Submit">
-        {% if messages %}
-        {% for message in messages %}
-        <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
-          <strong> {{ message }}</strong>
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        {% endfor %}
-        {% endif %}
-      </div>
 
 
 
-    </form>
-  </div>
+      </form>
+    </div>
 </center>
-  
+
 {% endblock content %}
