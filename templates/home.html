@@ -5,6 +5,13 @@
 
 {% block content %}
 <style>
+  @media screen and (max-width: 512px) {
+    #hero {
+      display: none; 
+    }
+  }
+    
+ 
 .vert-move {
     -webkit-animation: mover 2s infinite  alternate;
     animation: mover 2s infinite  alternate;
@@ -68,7 +75,7 @@ img.vert-move {
   <section class="intro fade-in-text">
     <p class="intro__subtitle">
     <div class="intro__illustrator">
-      <div class="main-img"><img src="{% static 'img/intro.png' %}" alt="dais" height="250px"></div>
+      <div class="main-img"><img src="{% static 'img/intro.png' %}" alt="dais" width="250px"></div>
     </div>
     <div class="main-para">MILITIA is a platform that links military and civilian forces. Modest reports about
       suspicious actions can be extremely advantageous to the military. It has been seen that even when a person
@@ -79,7 +86,7 @@ img.vert-move {
     </p>
   </section>
 </center>
-<section class="intro">
+<section class="intro" id="hero">
   <h1 class="intro__title">
     <span style="font-weight: normal;">
       Bridging the gap with
@@ -95,14 +102,14 @@ img.vert-move {
   <div class="intro__illustration">
     <div class="main-img vert-move"><img src="{% static 'img/hero.png' %}" alt="dais" height="350px"></div>
   </div>
-  <button class="button " style="  background-image: linear-gradient(
-    120deg, rgb(229, 47, 110) 0%, rgb(254, 135, 2) 100%);">Know more</button>
+  <a href="#team"><button class="button " style="  background-image: linear-gradient(
+    120deg, rgb(229, 47, 110) 0%, rgb(254, 135, 2) 100%);">  <a href="#team" style="color: white;">Know more</a></button>
   </div>
 </section>
 
 
 <center><div class="headings underline--magical">
- <h3>WHAT WE PROVIDE?</h3>
+ <h3>OUR SERVICES</h3>
 </div></center> 
 
 <ul class="cards">
@@ -152,8 +159,8 @@ img.vert-move {
 
 </ul>
 
-<center><div class="headings underline--magical">
-  <h3>Team Behind Militia</h3>
+<center id="team"><div class="headings underline--magical">
+  <h3>Our Team</h3>
 
 </div></center> 
 <div class="row">
@@ -163,7 +170,7 @@ img.vert-move {
       <img src="{% static 'img/anjali.jpg' %}" style="width:250px
 ; border-radius: 20px;">
       <h3>Anjali Vats</h3>
-      <p class="title">Sophmore,NITH</p>
+      <p class="title">Sophomore,NITH</p>
 
       <a href="https://www.linkedin.com/in/anjali-vats-188305206/" target="_blank" >
         <img src="{% static 'img/linkedin.png'%}" alt="blue" height="30rem" style="padding-right:1rem ;"></a>
@@ -179,7 +186,7 @@ img.vert-move {
       <img src="{% static 'img/priya1.jpg' %}" style="width:250px
 ; height: 298px;border-radius: 20px;">
       <h3>Priya Pahwa</h3>
-      <p class="title">Sophmore,NITH</p>
+      <p class="title">Sophomore,NITH</p>
       <a href="https://www.linkedin.com/in/priya-pahwa/" target="_blank" >
 <img src="{% static 'img/linkedin.png'%}" alt="blue" height="30rem" style="padding-right:1rem ;"></a>
 <a href="https://github.com/priyapahwa" target="_blank" >
@@ -194,7 +201,7 @@ img.vert-move {
       <img src="{% static 'img/suyashb.jpg' %}" style="width:250px
 ; border-radius: 20px;">
       <h3>Suyash Barwal</h3>
-      <p class="title">Sophmore,NITH</p>
+      <p class="title">Sophomore,NITH</p>
 
 
       <a href="https://www.linkedin.com/in/suyash-barwal-93ba84202/" target="_blank" >
@@ -209,7 +216,7 @@ img.vert-move {
     <div class="profilecard" style="width: 250px;">
       <img src="{% static 'img/suyashs1.jpg' %}" style="width:250px; border-radius: 20px;">
       <h3>Suyash Sachdeva</h3>
-      <p class="title">Sophmore,NITH</p>
+      <p class="title">Sophomore,NITH</p>
       <a href="https://www.linkedin.com/in/suyash-sachdeva-3096b3202/" target="_blank" >
         <img src="{% static 'img/linkedin.png'%}" alt="blue" height="30rem" style="padding-right:1rem ;"></a>
         <a href="https://github.com/suyashsachdeva" target="_blank" >

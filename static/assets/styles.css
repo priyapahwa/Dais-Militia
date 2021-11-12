@@ -833,7 +833,7 @@ font-size: 1.5rem;
   background-image: linear-gradient(
 120deg, rgb(229, 47, 110) 0%, rgb(254, 135, 2) 100%);
   background-repeat: no-repeat;
-  background-size: 100% 0.2em;
+  background-size: 90% 0.2em;
   background-position: 0 88%;
   transition:  0.25s ease-in;
  width:max-content;
