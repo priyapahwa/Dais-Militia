@@ -569,7 +569,7 @@ padding-top:1rem;
     .column
     {
   
-        width:100%;
+        width:80%;
         display:block;
         margin-left: 5%;
         margin-right: 5%;
@@ -830,10 +830,11 @@ font-size: 1.5rem;
 }
 
 .underline--magical {
+
   background-image: linear-gradient(
 120deg, rgb(229, 47, 110) 0%, rgb(254, 135, 2) 100%);
   background-repeat: no-repeat;
-  background-size: 90% 0.2em;
+  background-size: 100% 0.2em;
   background-position: 0 88%;
   transition:  0.25s ease-in;
  width:max-content;

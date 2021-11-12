@@ -123,7 +123,7 @@
           <label for="location">Location</label>
         </div>
         <div class="col-75">
-          <input type="text" id="location" name="location">
+          <input type="text" id="location" name="location" required>
         </div>
       </div>
       <div class="row">
@@ -131,15 +131,15 @@
           <label for="pin_code">Pin Code</label>
         </div>
         <div class="col-75">
-          <input type="text" id="pin_code" name="pin_code">
+          <input type="number" id="pin_code" name="pin_code" min="100000" max="999999">
         </div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="date">Date</label>
+          <label for="date"required>Date</label>
         </div>
         <div class="col-75">
-          <input type="date" id="date" name="date">
+          <input type="date" id="date" name="date"required>
         </div>
       </div>
 
@@ -148,7 +148,7 @@
           <label for="title">Title</label>
         </div>
         <div class="col-75">
-          <input type="text" id="title" name="title">
+          <input type="text" id="title" name="title"required>
         </div>
       </div>
 
@@ -157,7 +157,7 @@
           <label for="message">About the incident</label>
         </div>
         <div class="col-75">
-          <textarea id="message" name="message" style="height:200px"></textarea>
+          <textarea id="message" name="message" style="height:200px"required></textarea>
         </div>
       </div>
       <div class="row">

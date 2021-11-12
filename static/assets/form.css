@@ -5,6 +5,13 @@ input[type=text], select, textarea{
   box-sizing: border-box;
   resize: vertical;
 }
+input[type=number]{
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
 input[type=date], select, textarea{
   width: 100%;
   padding: 12px;
