@@ -13,6 +13,11 @@ from militia.models import Tip
 
 
 class TipAdmin(admin.ModelAdmin):
+
+    list_display = ["title", "location", "pin_code", "date"]
+    list_filter = ["title", "pin_code"]
+    search_fields = ["title", "location", "pin_code"]
+
     def response_change(self, request, obj):
 
         if "decrypt" in request.POST:
