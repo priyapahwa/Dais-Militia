@@ -1,9 +1,53 @@
 {% extends 'base.html' %}
-
+ 
 {% block title %}Sign Up{% endblock title %}
-
+ 
 {% block content %}
-<h2>Sign Up</h2>
+<style>
+ 
+ 
+    form{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color:#232831 ;
+    margin-left:15vw;
+    margin-right:15vw;
+    margin-top:1vw;
+    margin-bottom:1vw;
+        padding:2rem;
+        border-radius:1rem;
+        box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.21);
+    }
+ 
+        input{
+  border:none;
+  width:50vw;
+  color:black;
+  border-radius: 10px;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+button{
+    width:20vw;
+}
+li{
+    margin-left: 1.7rem;
+}
+    label{
+        display:flex;
+   
+color:white;
+    }
+ form span,p{
+display:grid;
+    color:grey
+}
+form ul{
+    color:grey
+}
+</style>
+<center><h1 class="headings underline--magical">Sign Up</h1></center>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}

@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
-
+ 
 {% block title %}Home{% endblock title %}
 {% load static %}
-
+ 
 {% block content %}
 <style>
   @media screen and (max-width: 512px) {
     #hero {
-      display: none; 
+      display: none;
     }
   }
-    
+   
  
 .vert-move {
     -webkit-animation: mover 2s infinite  alternate;
@@ -28,11 +28,11 @@ img.vert-move {
     0% { transform: translateY(0); }
     100% { transform: translateY(-2rem); }
 }
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
 .fade-in-text {
   animation: fadeIn linear 2s;
   -webkit-animation: fadeIn linear 2s;
@@ -40,38 +40,38 @@ img.vert-move {
   -o-animation: fadeIn linear 2s;
   -ms-animation: fadeIn linear 2s;
 }
-
+ 
 @keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
+ 
 @-moz-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
+ 
 @-webkit-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
+ 
 @-o-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
+ 
 @-ms-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
+ 
 </style>
 <center>
   <div class="headings underline--magical">
     <center><h3>Who we are?</h3></center>
   </div>
-
+ 
   <section class="intro fade-in-text">
     <p class="intro__subtitle">
     <div class="intro__illustrator">
@@ -79,26 +79,26 @@ img.vert-move {
     </div>
     <div class="main-para">MILITIA is a platform that links military and civilian forces. Modest reports about
       suspicious actions can be extremely advantageous to the military. It has been seen that even when a person
-      possesses critical knowledge, he/she/they tend not to share it for fear of being exposed.  Militia equips them
+      possesses critical knowledge, he/she/they tend not to share it for fear of being exposed.  Militia equips them
       with a podium where they may disclose information discreetly.The information that is given is securely
       transmitted to the military by emplyoing encryption techniques.MILITIA views greater national security
-      by bridging the divide.</div>
+      by bridging the divide.</div>
     </p>
   </section>
 </center>
 <section class="intro" id="hero">
-  <h1 class="intro__title">
+  <div class="intro__title">
     <span style="font-weight: normal;">
       Bridging the gap with
-    </span> <span class="underline--magical">MILITIA</span> 
-  </h1>
+    </span> <span class="underline--magical">MILITIA</span>
+  </div>
   <p class="intro__subtitle main-para">
     Have some information that might be useful to the military?
     Where to report when you know something crucial that might assist the military?
-
+ 
   </p>
-
-
+ 
+ 
   <div class="intro__illustration">
     <div class="main-img vert-move"><img src="{% static 'img/hero.png' %}" alt="dais" width="350px"></div>
   </div>
@@ -106,16 +106,16 @@ img.vert-move {
     120deg, rgb(229, 47, 110) 0%, rgb(254, 135, 2) 100%);">  <a href="#team" style="color: white;">Know more</a></button>
   </div>
 </section>
-
-
+ 
+ 
 <center><div class="headings underline--magical">
  <h3>Our Services</h3>
-</div></center> 
-
+</div></center>
+ 
 <ul class="cards">
-
-
-
+ 
+ 
+ 
   <li class="cards-item">
     <div class="card">
       <div class="card-image ">
@@ -123,8 +123,8 @@ img.vert-move {
       </div>
       <div class="card-content">
         <div class="card-title">Security</div>
-        <p class="card-text">The tips provided by you are secure and are encrypted on the way to military.</p>
-
+        <div class="card-text">The tips provided by you are secure and are encrypted on the way to military.</div>
+ 
       </div>
     </div>
   </li>
@@ -135,9 +135,9 @@ img.vert-move {
       </div>
       <div class="card-content">
         <div class="card-title ">Dais</div>
-        <p class="card-text">Militia provides a friendly interface to collaborate and assist the military as a
-          civilian.</p>
-
+        <div class="card-text">Militia provides a friendly interface to collaborate and assist the military as a
+          civilian.</div>
+ 
       </div>
     </div>
   </li>
@@ -148,21 +148,21 @@ img.vert-move {
       </div>
       <div class="card-content">
         <div class="card-title">Anonymity</div>
-        <p class="card-text">Your identity is not revealed.So don't hesitate to share whatever crucial infomrmation
-          you have.</p>
-
+        <div class="card-text">Your identity is not revealed.So don't hesitate to share whatever crucial infomrmation
+          you have.</div>
+ 
       </div>
     </div>
   </li>
-
-
-
+ 
+ 
+ 
 </ul>
-
+ 
 <center id="team"><div class="headings underline--magical">
   <h3>Our Team</h3>
-
-</div></center> 
+ 
+</div></center>
 <div class="row">
   <div class="column ">
     <div class="profilecard" style="width: 250px
@@ -171,15 +171,15 @@ img.vert-move {
 ; border-radius: 20px;">
       <h3>Anjali Vats</h3>
       <p class="title">Sophomore,NITH</p>
-
+ 
       <a href="https://www.linkedin.com/in/anjali-vats-188305206/" target="_blank" >
         <img src="{% static 'img/linkedin.png'%}" alt="blue" height="30rem" style="padding-right:1rem ;"></a>
         <a href="https://github.com/anjalivats2712" target="_blank" >
           <img src="{% static 'img/github.png'%}" alt="blue" height="30rem"></a>
-            
+           
     </div>
   </div>
-
+ 
   <div class="column">
     <div class="profilecard" style="width: 250px
 ;">
@@ -191,7 +191,7 @@ img.vert-move {
 <img src="{% static 'img/linkedin.png'%}" alt="blue" height="30rem" style="padding-right:1rem ;"></a>
 <a href="https://github.com/priyapahwa" target="_blank" >
   <img src="{% static 'img/github.png'%}" alt="blue" height="30rem"></a>
-    
+   
     </div>
   </div>
  
@@ -202,16 +202,16 @@ img.vert-move {
 ; border-radius: 20px;">
       <h3>Suyash Barwal</h3>
       <p class="title">Sophomore,NITH</p>
-
-
+ 
+ 
       <a href="https://www.linkedin.com/in/suyash-barwal-93ba84202/" target="_blank" >
         <img src="{% static 'img/linkedin.png'%}" alt="blue" height="30rem" style="padding-right:1rem ;"></a>
         <a href="https://github.com/suyash2002" target="_blank" >
           <img src="{% static 'img/github.png'%}" alt="blue" height="30rem"></a>
-            
+           
     </div>
   </div>
-
+ 
   <div class="column">
     <div class="profilecard" style="width: 250px;">
       <img src="{% static 'img/suyashs1.jpg' %}" style="width:250px; border-radius: 20px;">
@@ -221,36 +221,10 @@ img.vert-move {
         <img src="{% static 'img/linkedin.png'%}" alt="blue" height="30rem" style="padding-right:1rem ;"></a>
         <a href="https://github.com/suyashsachdeva" target="_blank" >
           <img src="{% static 'img/github.png'%}" alt="blue" height="30rem"></a>
-            
+           
     </div>
   </div>
 </div>
-
-<footer>
-
-  <footer class="footer-distributed">
-
-    <div class="footer-left">
-
-      <h3>Team MILITIA</h3>
-
-      <p class="footer-company-name">If you have suggestions,
-        then don't hesitate to ping us up!</p>
-      <img src="{% static 'img/contact-form.png' %}" height="250px" alt="">
-
-    </div>
-    <div class="footer-right">
-
-      <p class="underline--magical">Contact Us</p>
-
- <h3> <a mailto=""><img src="{% static 'img/gmail.png'%}" height="30rem"alt="" style="margin-top: 0.9rem;"></a> 
-  <span style="position: relative; top:-0.5rem ;font-size:1.2rem ;font-weight: normal;color:grey">militia@gmail.com</span> </h3>
-
- <h3> <a mailto=""><img src="{% static 'img/github.png'%}" height="30rem"alt="" style="margin-top: 0.9rem;"></a> 
-  <span style="position: relative; top:-0.5rem ;font-size:1.2rem ;font-weight: normal;color:grey">Github</span> </h3>
-    </div>
-
-  </footer>
-</footer>
-
+ 
+ 
 {% endblock content %}

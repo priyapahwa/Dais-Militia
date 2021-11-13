@@ -6,14 +6,14 @@
     </label>
     <a href="{% url 'home' %}" class="logo">Militia</a>
     <ul class="navlinks">
-      <li><a href="home.html">About</a></li>
       {% if user.is_authenticated %}
       <li><a href="{% url 'forms' %}">Form</a></li>
       <li><a href="{% url 'account_logout' %}">Log Out</a></li>
       {% else %}
       <li><a href="{% url 'account_login' %}">Login</a></li>
-      <li><a href="{% url 'account_signup' %}">Sign-up</a></li>
+      <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
       {% endif %}
+      <li><a href="{% url 'faq' %}">Help Center</a></li>
     </ul>
   </nav>
 </header>

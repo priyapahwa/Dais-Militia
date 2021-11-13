@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
-
+ 
 {% block title %}Log Out{% endblock title %}
-
+ 
 {% block content %}
+ 
 <div class="container">
+    <center>
 <h2>Log Out</h2>
 <p>Are you sure you want to log out?</p>
 <form method="post" action="{% url 'account_logout' %}">
@@ -11,5 +13,6 @@
     {{ form.as_p }}
     <button type="submit">Log Out</button>
 </form>
+</center>
 </div>
 {% endblock content %}
