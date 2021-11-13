@@ -23,6 +23,14 @@ Even with information at hand, it is difficult for the military to distinguish a
 <h2> 
 📷Preview Screenshots
 </h2>
+
+<div align = center>
+<img src = "https://user-images.githubusercontent.com/77075449/141653858-a4f701b5-d1a5-40bb-a8df-e140696c8709.jpeg" width = 360px />
+<img src = "https://user-images.githubusercontent.com/77075449/141653653-7923c1fa-8eac-437a-9a06-922c3469ceb9.jpeg" width = 360px />
+<img src = "https://user-images.githubusercontent.com/77075449/141653655-e8c923a0-53c1-4386-8dd8-3fcebf9c67fe.jpeg" width = 360px />
+<img src = "https://user-images.githubusercontent.com/77075449/141653656-74dc17a9-8c9d-48b6-9ff8-f9120a7c3768.jpeg" width = 360px/>
+</div>
+
  <br/> <br/> 
 <h2> 
  👩‍💻Testing
@@ -42,21 +50,18 @@ Execute the following sequence of code to start contributing and testing:
  - To install neccesities
       ```sh
    pip install django 
-    ``` 
-    ```sh
-   pip install django 
-    ```    
+    ```     
 - Run the migrations using the following commands
     ```sh
-    python3 manage.py makemigrations
+    python manage.py makemigrations
     ```
     ```sh
-    python3 manage.py migrate
+    python manage.py migrate
     ```
 
 - Run the Django server by
     ```sh
-    python3 manage.py runserver
+    python manage.py runserver
     ```
 
 <br>
