@@ -31,11 +31,6 @@ Even with information at hand, it is difficult for the military to distinguish a
 Our source code can be tested and contributed to using the following steps:
 ### 1. Website
 Execute the following sequence of code to start contributing and testing:
-- Open the directory labelled militia using the command
-    ```sh
-    cd militia
-    ```
-
 - To create new environment
     ```sh
     python -m venv . 
