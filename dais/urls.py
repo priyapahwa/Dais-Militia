@@ -19,13 +19,11 @@ from django.urls.conf import include
 
 urlpatterns = [
     # Django admin
-    path('admin/', admin.site.urls),
-
-    # User Management 
-    path('accounts/', include(('users.urls', 'users'))),
-    path('accounts/', include('allauth.urls')),  
-
-
+    path("admin/", admin.site.urls),
+    # User Management
+    path("accounts/", include(("users.urls", "users"))),
+    path("accounts/", include("allauth.urls")),
     # Local apps
-    path('', include('militia.urls')),
+    path("", include("militia.urls")),
+    path("", include("posts.urls")),
 ]

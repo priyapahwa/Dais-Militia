@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # Local
     "users.apps.UsersConfig",
     "militia.apps.MilitiaConfig",
+    "posts.apps.PostsConfig",
 ]
 
 AUTH_USER_MODEL = "users.CustomUser"
