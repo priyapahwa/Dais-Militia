@@ -1,7 +1,7 @@
 <h1 align="center"> 
  📝Militia📝
 </h1>
-This repository has been created for project 'Militia'. Militia envisions to a colloborative approach between civilians and military towards strengthening national security .<br/> <br/>
+This repository has been created for project **Militia**. Militia envisions to a collaborative approach between civilians and military towards strengthening national security.<br/> <br/>
 🔭  With India topping the charts in terms of threats to national security, how can a civilian assist the military? Ironically, the greatest threat to national security arises when individuals take a step back, fearful of the unforeseeable consequences thereby hindering its prevention. A collaborative action taken from both sides is the sole way out to prevent any potential attacks.
 But, where to address crucial tips in a chaotic situation that might assist the military in their operations?
 Even with information at hand, it is difficult for the military to distinguish a legit tip from another spiteful suggestion.
