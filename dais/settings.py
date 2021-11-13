@@ -8,8 +8,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
-import django_heroku
-import dj_database_url
 
 from dotenv import load_dotenv
 
@@ -26,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = str(os.getenv("SECRET_KEY"))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True if os.getenv("DEVELOPMENT", "True") == "True" else False
 
 ALLOWED_HOSTS = [
     "0.0.0.0",
@@ -176,4 +174,7 @@ ACCOUNT_USERNAME_REQUIRED = False
 # At present, encryption key is exposed.
 ENCRYPT_KEY = b"UaGEV6eGU2Br_V1ecyS0rnJD3rLQIhRZugqH2Y2KH8g="
 
-django_heroku.settings(locals())
+if not DEBUG:
+    import django_heroku
+
+    django_heroku.settings(locals())
