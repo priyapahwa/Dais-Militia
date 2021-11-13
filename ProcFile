@@ -1,0 +1,5 @@
+web: gunicorn dais.wsgi --log-file -
+release: python3 manage.py makemigrations users
+release: python3 manage.py makemigrations militia
+release: python3 manage.py makemigrations
+release: python3 manage.py migrate
